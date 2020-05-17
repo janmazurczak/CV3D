@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SceneViewController.swift
 //  CV3D
 //
 //  Created by Jan Mazurczak on 17/05/2020.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 
