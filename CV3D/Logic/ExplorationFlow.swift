@@ -8,4 +8,5 @@
 
 protocol ExplorationFlow {
     
+    func requestData()
 }

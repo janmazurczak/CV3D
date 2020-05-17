@@ -7,5 +7,7 @@
 //
 
 class DefaultExplorationFlow: ExplorationFlow {
-    
+    func requestData() {
+        
+    }
 }

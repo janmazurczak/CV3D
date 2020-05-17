@@ -17,3 +17,9 @@ class SceneViewController: UIViewController {
 
 }
 
+extension SceneViewController: Presenter {
+    func present(_ cv: CV) {
+        
+    }
+}
+
