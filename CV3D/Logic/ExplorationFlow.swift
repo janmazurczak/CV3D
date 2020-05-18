@@ -7,5 +7,5 @@
 //
 
 protocol ExplorationFlow {
-    func requestData()
+    func requestData(for presenter: Presenter)
 }

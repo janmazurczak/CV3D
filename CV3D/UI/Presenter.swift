@@ -6,6 +6,6 @@
 //  Copyright © 2020 Jan Mazurczak. All rights reserved.
 //
 
-protocol Presenter {
+protocol Presenter: class {
     func present(_ cv: CV)
 }
