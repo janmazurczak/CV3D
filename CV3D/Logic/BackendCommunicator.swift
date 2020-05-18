@@ -7,5 +7,5 @@
 //
 
 protocol BackendCommunicator {
-    
+    func fetch<Result>(_ resultType: Result.Type, at path: [String], completion: @escaping (Result?) -> Void) where Result : Decodable
 }

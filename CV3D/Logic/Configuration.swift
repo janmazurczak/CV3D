@@ -6,6 +6,8 @@
 //  Copyright © 2020 Jan Mazurczak. All rights reserved.
 //
 
+import Foundation
+
 protocol ConfigurationScheme {
     var communicator: BackendCommunicator { get }
     var explorationFlow: ExplorationFlow { get }
@@ -21,9 +23,14 @@ struct Configuration {
 }
 
 struct DefaultConfiguration: ConfigurationScheme {
-    let communicator: BackendCommunicator = StandardBackendCommunicator()
+    let communicator: BackendCommunicator = StandardBackendCommunicator(at: .testEndpoint)
     let explorationFlow: ExplorationFlow = DefaultExplorationFlow()
     func makePresenter() -> Presenter {
         SceneViewController()
     }
+}
+
+extension URL {
+    static let testEndpoint = URL(string: "https://jansgames.com/api/test")!
+    static let prodEndpoint = URL(string: "https://jansgames.com/api/v1")!
 }

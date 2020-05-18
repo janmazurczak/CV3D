@@ -7,6 +7,5 @@
 //
 
 protocol ExplorationFlow {
-    
     func requestData()
 }
