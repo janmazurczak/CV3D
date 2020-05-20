@@ -12,7 +12,7 @@ class DefaultExplorationFlow: ExplorationFlow {
     func requestData(for presenter: Presenter) {
         let cachedCV =
             CV(contentsOf: .cvCache) ??                 // Check what's stored already
-            CV(version: -1, root: .text("Loading..."))  // Create a placeholder if nothing is stored
+                CV(version: -1, root: .init(title: "Loading...", items: []))  // Create a placeholder if nothing is stored
         presenter.present(cachedCV)
         Configuration.current.communicator.fetch(CV.self, at: ["getCV"]) { [weak presenter] in
             guard let cv = $0 else { return }

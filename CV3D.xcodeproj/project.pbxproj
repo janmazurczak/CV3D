@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00328F22474543700DA3E9D /* VisualEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328F12474543700DA3E9D /* VisualEffects.swift */; };
+		A00328F42474549B00DA3E9D /* ViewPortMatchingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328F32474549B00DA3E9D /* ViewPortMatchingScene.swift */; };
+		A00328F62474553F00DA3E9D /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328F52474553F00DA3E9D /* BlockNode.swift */; };
+		A00328F824749B1B00DA3E9D /* BlockNodeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328F724749B1B00DA3E9D /* BlockNodeTransitions.swift */; };
+		A00328FA24749BF200DA3E9D /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328F924749BF200DA3E9D /* TextNode.swift */; };
+		A00328FC2474B2F200DA3E9D /* TitleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328FB2474B2F200DA3E9D /* TitleNode.swift */; };
+		A00328FE2474B75E00DA3E9D /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328FD2474B75E00DA3E9D /* ButtonNode.swift */; };
+		A00329002474BAE700DA3E9D /* RootNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00328FF2474BAE700DA3E9D /* RootNode.swift */; };
 		A099F19E2471D8540047C949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F19D2471D8540047C949 /* AppDelegate.swift */; };
 		A099F1A02471D8540047C949 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F19F2471D8540047C949 /* SceneDelegate.swift */; };
 		A099F1A22471D8540047C949 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F1A12471D8540047C949 /* SceneViewController.swift */; };
@@ -20,10 +28,19 @@
 		A099F1C22471ECB10047C949 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F1C12471ECB10047C949 /* Configuration.swift */; };
 		A099F1C42471F1170047C949 /* BackendCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F1C32471F1170047C949 /* BackendCommunicator.swift */; };
 		A099F1C62471F1500047C949 /* StandardBackendCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F1C52471F1500047C949 /* StandardBackendCommunicator.swift */; };
+		A099F1C824739C500047C949 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099F1C724739C500047C949 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A099F19A2471D8540047C949 /* CV3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00328F12474543700DA3E9D /* VisualEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffects.swift; sourceTree = "<group>"; };
+		A00328F32474549B00DA3E9D /* ViewPortMatchingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPortMatchingScene.swift; sourceTree = "<group>"; };
+		A00328F52474553F00DA3E9D /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
+		A00328F724749B1B00DA3E9D /* BlockNodeTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNodeTransitions.swift; sourceTree = "<group>"; };
+		A00328F924749BF200DA3E9D /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
+		A00328FB2474B2F200DA3E9D /* TitleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleNode.swift; sourceTree = "<group>"; };
+		A00328FD2474B75E00DA3E9D /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		A00328FF2474BAE700DA3E9D /* RootNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNode.swift; sourceTree = "<group>"; };
+		A099F19A2471D8540047C949 /* Jan's CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jan's CV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A099F19D2471D8540047C949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A099F19F2471D8540047C949 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A099F1A12471D8540047C949 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 		A099F1C12471ECB10047C949 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A099F1C32471F1170047C949 /* BackendCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCommunicator.swift; sourceTree = "<group>"; };
 		A099F1C52471F1500047C949 /* StandardBackendCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBackendCommunicator.swift; sourceTree = "<group>"; };
+		A099F1C724739C500047C949 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +80,7 @@
 		A099F19B2471D8540047C949 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A099F19A2471D8540047C949 /* CV3D.app */,
+				A099F19A2471D8540047C949 /* Jan's CV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +114,15 @@
 			children = (
 				A099F1BF2471EBDB0047C949 /* Presenter.swift */,
 				A099F1A12471D8540047C949 /* SceneViewController.swift */,
+				A00328F32474549B00DA3E9D /* ViewPortMatchingScene.swift */,
+				A099F1C724739C500047C949 /* Scene.swift */,
+				A00328F52474553F00DA3E9D /* BlockNode.swift */,
+				A00328FF2474BAE700DA3E9D /* RootNode.swift */,
+				A00328F924749BF200DA3E9D /* TextNode.swift */,
+				A00328FB2474B2F200DA3E9D /* TitleNode.swift */,
+				A00328FD2474B75E00DA3E9D /* ButtonNode.swift */,
+				A00328F724749B1B00DA3E9D /* BlockNodeTransitions.swift */,
+				A00328F12474543700DA3E9D /* VisualEffects.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -129,7 +156,7 @@
 			);
 			name = CV3D;
 			productName = CV3D;
-			productReference = A099F19A2471D8540047C949 /* CV3D.app */;
+			productReference = A099F19A2471D8540047C949 /* Jan's CV.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,14 +212,23 @@
 			files = (
 				A099F1B82471DC520047C949 /* CV.swift in Sources */,
 				A099F1C02471EBDB0047C949 /* Presenter.swift in Sources */,
+				A00328F22474543700DA3E9D /* VisualEffects.swift in Sources */,
+				A00328F42474549B00DA3E9D /* ViewPortMatchingScene.swift in Sources */,
+				A00328FC2474B2F200DA3E9D /* TitleNode.swift in Sources */,
+				A00328FA24749BF200DA3E9D /* TextNode.swift in Sources */,
 				A099F1BC2471DC880047C949 /* DefaultExplorationFlow.swift in Sources */,
 				A099F1BA2471DC7A0047C949 /* ExplorationFlow.swift in Sources */,
+				A00328F824749B1B00DA3E9D /* BlockNodeTransitions.swift in Sources */,
 				A099F1C62471F1500047C949 /* StandardBackendCommunicator.swift in Sources */,
 				A099F1C42471F1170047C949 /* BackendCommunicator.swift in Sources */,
 				A099F1A22471D8540047C949 /* SceneViewController.swift in Sources */,
 				A099F19E2471D8540047C949 /* AppDelegate.swift in Sources */,
 				A099F1C22471ECB10047C949 /* Configuration.swift in Sources */,
+				A00328F62474553F00DA3E9D /* BlockNode.swift in Sources */,
 				A099F1A02471D8540047C949 /* SceneDelegate.swift in Sources */,
+				A00329002474BAE700DA3E9D /* RootNode.swift in Sources */,
+				A099F1C824739C500047C949 /* Scene.swift in Sources */,
+				A00328FE2474B75E00DA3E9D /* ButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.janmazurczak.CV3D;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Jan's CV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,7 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.janmazurczak.CV3D;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Jan's CV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

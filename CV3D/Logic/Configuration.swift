@@ -34,3 +34,6 @@ extension URL {
     static let testEndpoint = URL(string: "https://jansgames.com/api/test")!
     static let prodEndpoint = URL(string: "https://jansgames.com/api/v1")!
 }
+
+// Test data available at https://jansgames.com/api/test/getCV
+// Production data available at https://jansgames.com/api/v1/getCV

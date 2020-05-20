@@ -10,7 +10,7 @@ import Foundation
 
 struct CV: Codable {
     let version: Int
-    let root: CVBranch
+    let root: CVBlock
 }
 
 struct CVBlock: Codable {
