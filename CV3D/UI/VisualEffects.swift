@@ -12,9 +12,6 @@ import QuartzCore
 public extension Array where Element == CIFilter {
     static func border() -> [CIFilter] {
         [
-//            CIFilter(name: "CICrystallize", parameters: [
-//                kCIInputRadiusKey : 25
-//            ]),
             CIFilter(name: "CILineOverlay", parameters: [:]),
             CIFilter(name: "CIColorInvert", parameters: [:]),
             CIFilter(name: "CIFalseColor", parameters: [
@@ -29,9 +26,9 @@ public extension Array where Element == CIFilter {
                 kCIInputRadiusKey : 4,
                 kCIInputIntensityKey : 0.3
             ]),
-//            CIFilter(name: "CICrystallize", parameters: [
-//                kCIInputRadiusKey : 3
-//            ]),
+            CIFilter(name: "CICrystallize", parameters: [
+                kCIInputRadiusKey : 2
+            ]),
             CIFilter(name: "CIFalseColor", parameters: [
                 "inputColor0" : CIColor(color: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)),
                 "inputColor1" : CIColor(color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
@@ -41,12 +38,9 @@ public extension Array where Element == CIFilter {
     static func text() -> [CIFilter] {
         [
             CIFilter(name: "CIBloom", parameters: [
-                kCIInputRadiusKey : 4,
+                kCIInputRadiusKey : 2,
                 kCIInputIntensityKey : 1
             ]),
-//            CIFilter(name: "CICrystallize", parameters: [
-//                kCIInputRadiusKey : 2.5
-//            ]),
             CIFilter(name: "CIFalseColor", parameters: [
                 "inputColor0" : CIColor(color: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)),
                 "inputColor1" : CIColor(color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))

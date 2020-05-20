@@ -24,7 +24,7 @@ extension BlockNode {
         runAction(.sequence([
             .unhide(),
             .group([
-                .move(to: SCNVector3(0, 0, -200), duration: 0.3),
+                .move(to: SCNVector3(0, 0, -200), duration: 0.2),
                 .fadeOpacity(to: 0.14, duration: 0.3)
             ])
         ]), forKey: "focus")
@@ -32,7 +32,7 @@ extension BlockNode {
     
     func focusOut() {
         runAction(.group([
-            .move(to: SCNVector3(0, 0, -200), duration: 0.4),
+            .move(to: SCNVector3(0, 0, -200), duration: 0.2),
             .fadeOpacity(to: 0.14, duration: 0.4)
         ]), forKey: "focus")
         animateDeeplyEachChild(.defocus(in: 0.5), with: "focusing")
@@ -40,19 +40,20 @@ extension BlockNode {
     
     func focusIn() {
         runAction(.group([
-            .move(to: SCNVector3Zero, duration: 0.6),
+            .move(to: SCNVector3Zero, duration: 0.3),
             .fadeOpacity(to: 1, duration: 0.2)
         ]), forKey: "focus")
         animateDeeplyEachChild(.focus(in: 0.4), with: "focusing")
     }
     
     func jumpIn() {
-        scale.y = 0.005
+        scale = SCNVector3(0.01, 0.01, 0.01)
         runAction(.sequence([
             .fadeIn(duration: 0.1),
             .group([
-                .scale(to: 1, duration: 0.9),
+                .scale(to: 1, duration: 0.3),
                 .sequence([
+                    .rotateTo(x: -0.1, y: 0, z: 0, duration: 0.1),
                     .rotateTo(x: 0.1, y: 0, z: 0, duration: 0.2),
                     .rotateTo(x: -0.1, y: 0, z: 0, duration: 0.16),
                     .rotateTo(x: 0.1, y: 0, z: 0, duration: 0.12),
@@ -65,8 +66,8 @@ extension BlockNode {
     func jumpOut() {
         runAction(.sequence([
             .group([
-                .fadeOut(duration: 0.4),
-                .move(to: SCNVector3(0, 0, 300), duration: 0.4)
+                .fadeOut(duration: 0.2),
+                .move(to: SCNVector3(0, 0, 200), duration: 0.2)
             ]),
             .removeFromParentNode()
         ]), forKey: "jump")

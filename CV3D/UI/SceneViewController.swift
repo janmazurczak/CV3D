@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import SafariServices
 import StoreKit
+import MessageUI
 
 class SceneViewController: UIViewController {
     
@@ -65,13 +66,19 @@ class SceneViewController: UIViewController {
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         case .mail(let mail):
-            let vc = SFSafariViewController(url: URL(string: "https://jansgames.com")!)
+            guard MFMailComposeViewController.canSendMail() else { return }
+            let vc = MFMailComposeViewController()
+            vc.setToRecipients([mail.mail])
+            vc.setSubject(mail.subject)
+            vc.mailComposeDelegate = self
             present(vc, animated: true, completion: nil)
         case .appStoreLink(let item):
             let vc = SKStoreProductViewController()
             vc.delegate = self
-            vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier : item]) { loaded, error in }
-            present(vc, animated: true, completion: nil)
+            vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier : item]) { [weak self, weak vc] loaded, error in
+                guard loaded, let vc = vc else { return }
+                self?.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
@@ -92,6 +99,12 @@ extension SceneViewController: SFSafariViewControllerDelegate {
 
 extension SceneViewController: SKStoreProductViewControllerDelegate {
     func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SceneViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
 }
