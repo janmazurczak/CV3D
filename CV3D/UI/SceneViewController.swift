@@ -75,10 +75,8 @@ class SceneViewController: UIViewController {
         case .appStoreLink(let item):
             let vc = SKStoreProductViewController()
             vc.delegate = self
-            vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier : item]) { [weak self, weak vc] loaded, error in
-                guard loaded, let vc = vc else { return }
-                self?.present(vc, animated: true, completion: nil)
-            }
+            vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier : item.itemID]) { _, _ in }
+            present(vc, animated: true, completion: nil)
         }
     }
     

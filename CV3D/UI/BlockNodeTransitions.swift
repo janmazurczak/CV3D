@@ -47,18 +47,15 @@ extension BlockNode {
     }
     
     func jumpIn() {
-        scale = SCNVector3(0.01, 0.01, 0.01)
+        opacity = 0
+        position.z = 200
+        eulerAngles = SCNVector3(.random(in: -1...1), .random(in: -1...1), .random(in: -1...1))
         runAction(.sequence([
-            .fadeIn(duration: 0.1),
+            .wait(duration: 0.2),
             .group([
-                .scale(to: 1, duration: 0.3),
-                .sequence([
-                    .rotateTo(x: -0.1, y: 0, z: 0, duration: 0.1),
-                    .rotateTo(x: 0.1, y: 0, z: 0, duration: 0.2),
-                    .rotateTo(x: -0.1, y: 0, z: 0, duration: 0.16),
-                    .rotateTo(x: 0.1, y: 0, z: 0, duration: 0.12),
-                    .rotateTo(x: 0, y: 0, z: 0, duration: 0.06)
-                ])
+                .fadeIn(duration: 0.4),
+                .rotateTo(x: 0, y: 0, z: 0, duration: 0.6),
+                .move(to: SCNVector3Zero, duration: 0.6)
             ])
         ]), forKey: "jump")
     }
@@ -66,8 +63,9 @@ extension BlockNode {
     func jumpOut() {
         runAction(.sequence([
             .group([
-                .fadeOut(duration: 0.2),
-                .move(to: SCNVector3(0, 0, 200), duration: 0.2)
+                .fadeOut(duration: 0.4),
+                .move(to: SCNVector3(0, 0, 200), duration: 0.4),
+                .rotateBy(x: .random(in: -1...1), y: .random(in: -1...1), z: .random(in: -1...1), duration: 0.4)
             ]),
             .removeFromParentNode()
         ]), forKey: "jump")

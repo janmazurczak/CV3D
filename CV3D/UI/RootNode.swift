@@ -15,7 +15,7 @@ class RootNode: BlockNode {
     override init(block: CVBlock) {
         super.init(block: block)
         box.runAction(.repeatForever(.rotateBy(x: 0.6, y: -1, z: 1.1, duration: 5)))
-        box.filters = .border() + .focusing()
+        box.filters = .box() + .focusing()
         box.geometry?.firstMaterial = SCNMaterial()
         box.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         addChildNode(box)
