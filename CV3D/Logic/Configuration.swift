@@ -23,7 +23,7 @@ struct Configuration {
 }
 
 struct DefaultConfiguration: ConfigurationScheme {
-    let communicator: BackendCommunicator = StandardBackendCommunicator(at: .testEndpoint)
+    let communicator: BackendCommunicator = StandardBackendCommunicator(at: .prodEndpoint)
     let explorationFlow: ExplorationFlow = DefaultExplorationFlow()
     func makePresenter() -> Presenter {
         SceneViewController()
